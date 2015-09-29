@@ -9,7 +9,8 @@ Back end: node/express server, mongo db
 Iterations:
 1. Create functional app on the front-end.  Files involved: app.jade, and files in public directory
 
-2. Create user registeration for admins: Connect express server with mongo db.  When the user registers or logs in, the user is redirected to app.js. 
+2. Create user registeration for admins: Connect express server with mongo db.  When the user registers or logs in, the user is redirected to app.js. -curt
+
 Admin users are users that can create bulk list of tasks.  Passwords should have a salt/hash. Usernames should be email format, passwords need to match password confirmations.  Etc, or up to Kurt at this point.
 
 3. Create employee interface: When an employee logs in, they can see tasks that their admins have created, add tasks to complete, and submit completion of tasks.
