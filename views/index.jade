@@ -6,41 +6,23 @@ block content
       .col-md-4.col-md-offset-4
         h1= title
         p This is a tool to help you identify tasks that you need to see are completed.
-        p Work flow:
-        ol
-          li Add tasks that need to be completed
-          li Add people that you have that can complete tasks
-          li Delegate the tasks from the main list over to indivials to complete
+        p Create a new account to access the features or log in if you're an existing user.
     .row
       .col-md-3.col-md-offset-3
-        form(ng-submit="createNewTask()")
-          input(type="text", ng-model="taskToManage", placeholder="task")
-          input(type="submit", value="create new task")
-          ul
-            li(ng-repeat="task in manageTasks")
-              | {{task}}
-              input(type="button", ng-click="editManagedTask(task)", value="edit")
-              input(type="button", ng-click="deleteManagedTask()", value="delete")
+        h2 Log in
+        form(method="get")
+          input(type="text", placeholder="email")
+          br
+          input(type="text", placeholder="password")
+          br
+          input(type='submit', value="submit")
       .col-md-4
-        form(ng-submit='createPerson()')
-          input(type='text', ng-model='personToAdd', placeholder='first name')
-          input(type='submit', value='Clock in employee')
-    .row
-      .col-md-10.col-md-offset-1
-        .col-md-3.col-md-offset-1.col-sm-3.col-sm-offset-1.person(ng-repeat='person in people')
-          h2 {{person.name}}
-          p Started working at {{person.timeStarted | date:"h:mm:a"}}
-          input(type='button', value='send home', ng-click='deletePerson(person)')
-          ul
-            li(ng-repeat='task in person.tasks')
-              | {{task}}
-              input(type='button', ng-click='editTask(person.name, task)', value='edit')
-              input(type='button', ng-click='deleteTask(person.name, task)', value='Complete task')
-          form(ng-submit='addTask(person.name, person.taskToAdd)')
-            input(type='text', ng-model='person.taskToAdd')
-            input(type='submit', value='assign task to this employee')
-    .row
-      .col-md-4.col-md-offset-4
-        h1 {{completedTasksHeader}}
-        ul
-          li(ng-repeat='task in tasksCompleted') {{task}} : {{taskCompleted | date:"h:mm:a"}}
+        form(method="post")
+          h2 Register
+          input(type='text', placeholder='email')
+          br
+          input(type='text', placeholder="password")
+          br
+          input(type="text", placeholder="password confirmation")
+          br
+          input(type='submit', value='complete registeration')
