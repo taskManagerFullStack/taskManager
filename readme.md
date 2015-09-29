@@ -7,7 +7,7 @@ Front end: Angular.js and bootstrap.css
 Back end: node/express server, mongo db
 
 Iterations:
-1. Create functional app on the front-end.  Files involved: app.jade, and files in public directory
+1. Create functional app on the front-end.  Files involved: app.jade, and files in public directory. -Nate
 
 2. Create user registeration for admins: Connect express server with mongo db.  When the user registers or logs in, the user is redirected to app.js. -curt
 
